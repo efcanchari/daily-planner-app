@@ -54,3 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Function to be called when a save button is clicked
+function saveHourData(button) {
+  // Get the hour key from the button's data-hour attribute
+  let hourKey = button.getAttribute('data-hour');
+
+  // Get the corresponding textarea element
+  let textarea = document.getElementById(hourKey);
+  // Save the value to localStorage
+  if (textarea) {
+    let value = textarea.value;
+    localStorage.setItem(hourKey, value);
+    console.log(`Data saved for ${hourKey}: ${value}`);
+  } else {
+    // Handle the case where the textarea doesn't exist
+    console.error(`Textarea with id '${hourKey}' not found.`);
+  }
+}
