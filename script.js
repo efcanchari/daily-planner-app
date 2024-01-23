@@ -66,6 +66,8 @@ function saveHourData(button) {
   if (textarea) {
     let value = textarea.value;
     localStorage.setItem(hourKey, value);
+    let messageRow = document.getElementById('messageRow');
+    messageRow.style.display = 'block';
     console.log(`Data saved for ${hourKey}: ${value}`);
   } else {
     // Handle the case where the textarea doesn't exist
