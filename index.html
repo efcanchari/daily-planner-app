@@ -34,7 +34,7 @@
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row-save">
-        <p class="small text-center">
+        <p class="small text-center" id="storedValue">
           Appointment Added to <span class="text-danger">localStore</span>
         </p>
       </div>
@@ -42,21 +42,21 @@
       <!-- Past hours (9AM to 11AM) -->
       <div class="row">
         <div class="col-1 hour">9AM</div>
-        <textarea class="col-10 description past">Event that already happened</textarea>
+        <textarea class="col-10 description past" id="hour-9">Event that already happened</textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">10AM</div>
-        <textarea class="col-10 description past">Event that already happened</textarea>
+        <textarea class="col-10 description past" id="hour-10">Event that already happened</textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">11AM</div>
-        <textarea class="col-10 description past">Event that already happened</textarea>
+        <textarea class="col-10 description past" id="hour-11">Event that already happened</textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
@@ -65,7 +65,7 @@
       <!-- Present hour (12PM) -->
       <div class="row">
         <div class="col-1 hour">12PM</div>
-        <textarea class="col-10 description present">Current hour</textarea>
+        <textarea class="col-10 description present" id="hour-12">Current hour</textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
@@ -74,35 +74,35 @@
       <!-- Future hours (1PM to 5PM) -->
       <div class="row">
         <div class="col-1 hour">1PM</div>
-        <textarea class="col-10 description future"></textarea>
+        <textarea class="col-10 description future" id="hour-13"></textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">2PM</div>
-        <textarea class="col-10 description future"></textarea>
+        <textarea class="col-10 description future" id="hour-14"></textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">3PM</div>
-        <textarea class="col-10 description future"></textarea>
+        <textarea class="col-10 description future" id="hour-15"></textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">4PM</div>
-        <textarea class="col-10 description future"></textarea>
+        <textarea class="col-10 description future" id="hour-16"></textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>
       </div>
       <div class="row">
         <div class="col-1 hour">5PM</div>
-        <textarea class="col-10 description future"></textarea>
+        <textarea class="col-10 description future" id="hour-17"></textarea>
         <button class="col-1 saveBtn">
           <i class="saveIcon fas fa-save"></i>
         </button>

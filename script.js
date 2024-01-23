@@ -34,3 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set the formatted date to the 'currentDay' element
   document.getElementById('currentDay').textContent = formattedDate;
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Loop from 9 to 15 (for hours 9am to 3pm)
+    for (let hour = 9; hour <= 17; hour++) {
+        let hourKey = `hour-${hour}`; // Key for the hour, e.g., "hour-9"
+        let textarea = document.getElementById(hourKey); // Get the textarea element
+
+        // Retrieve value from localStorage
+        let storedValue = localStorage.getItem(hourKey);
+
+        if (storedValue) {
+            // If there's a stored value for this hour, set it to the textarea
+            textarea.value = storedValue;
+        } else {
+            // Optional: clear the textarea if there's no stored value
+            textarea.value = '';
+        }
+    }
+});
