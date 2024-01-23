@@ -19,7 +19,7 @@ header {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-  padding: 60px;
+  /*padding: 60px;*/
 }
 
 .description {
@@ -37,15 +37,23 @@ header {
   border-top: 1px solid white;
 }
 
+.row-save {
+  height: 20px;
+  padding-top: 5px;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
@@ -69,4 +77,8 @@ header {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saveIcon{
+  margin-left: -50%;
 }
