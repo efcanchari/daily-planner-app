@@ -74,3 +74,33 @@ function saveHourData(button) {
     console.error(`Textarea with id '${hourKey}' not found.`);
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current hour
+    const currentHour = new Date().getHours();
+
+    // Loop from 9 to 17 (for your text boxes)
+    for (let hour = 9; hour <= 17; hour++) {
+        let textarea = document.getElementById(`hour-${hour}`); // Get the textarea element by id
+
+        // Ensure the textarea exists
+        if (textarea) {
+            if (hour < currentHour) {
+                // If the hour is in the past, add 'past' class and remove 'future' class
+                textarea.classList.add('past');
+                textarea.classList.remove('future');
+                textarea.classList.remove('present');
+            } else if (hour === currentHour) {
+                // If the hour is the current hour, add 'present' class and remove 'future' class
+                textarea.classList.add('present');
+                textarea.classList.remove('future');
+                textarea.classList.remove('past');
+            } else {
+                // If the hour is in the future, ensure 'future' class is set (default)
+                textarea.classList.remove('past');
+                textarea.classList.remove('present');
+            }
+        }
+    }
+});
